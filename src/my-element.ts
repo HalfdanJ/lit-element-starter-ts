@@ -6,6 +6,7 @@
 
 import {LitElement, html, css} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
+import './subelement.js';
 
 /**
  * An example element.
@@ -42,6 +43,8 @@ export class MyElement extends LitElement {
       <h1>${this.sayHello(this.name)}!</h1>
       <button @click=${this._onClick} part="button">
         Click Count: ${this.count}
+
+        <sub-element></sub-element>
       </button>
       <slot></slot>
     `;
