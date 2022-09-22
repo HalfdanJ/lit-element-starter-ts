@@ -3,6 +3,9 @@ import {customElement, property} from 'lit/decorators';
 
 @customElement('sub-element')
 export class SubElement extends LitElement {
+  @property()
+  name?: string;
+
   protected override render(): unknown {
     return html`Test`;
   }
